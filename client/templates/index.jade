@@ -11,7 +11,12 @@ html
         a(v-link="{path : '/foo' }") Foo
         a(v-link="{path : '/bar' }") Bar
       router-view
+    div(id='resource')
+      span  {{ message }}
+      span {{ msg }}
     include parts/body.jade
     script(type='text/javascript' src='../../node_modules/vue/dist/vue.js')
     script(type='text/javascript' src='../../node_modules/vue-router/dist/vue-router.js')
+    script(type='text/javascript' src='../../node_modules/vue-resource/dist/vue-resource.min.js')
     script(type='text/javascript' src='../scripts/router.js')
+    script(type='text/javascript' src='../scripts/resource.js')
