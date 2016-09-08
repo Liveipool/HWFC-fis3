@@ -12,6 +12,6 @@
 
 ## 运行方法
 1. npm install　（安装依赖包）；
-2. fis3 release　-d ./output （自行选择一个目录）；
-3. node output/server （打开服务器）；
-4. 在浏览器输入：　http://localhost:3000/
+2. fis3 release -d ./output -wL   （建议直接执行此命令，将目标代码release到HWFC/output文件夹里。也可以自行选择release到的路径。但若不指定路径，目标代码会自动release到说不定什么地方）；
+3. node output/server    （打开服务器，注意，node后面加的路径要根据第二步release到的路径来）；
+4. 在　http://localhost:3000/  打开页面
