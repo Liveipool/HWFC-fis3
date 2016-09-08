@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title HWFC
+    meta(charset='utf8')
+    link(rel='stylesheet' type='text/css' href='../styles/style.scss')
+  body
+    h1 hello HWFCers!
+    div(id='app')
+      p
+        a(v-link="{path : '/foo' }") Foo
+        a(v-link="{path : '/bar' }") Bar
+      router-view
+    include parts/body.jade
+    script(type='text/javascript' src='../../node_modules/vue/dist/vue.js')
+    script(type='text/javascript' src='../../node_modules/vue-router/dist/vue-router.js')
+    script(type='text/javascript' src='../scripts/router.js')
