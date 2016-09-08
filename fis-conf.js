@@ -29,10 +29,23 @@ fis.match('client/templates/(*.jade)', {
   release: '/$1'
 });
 
-// 开发者自己写的js 压缩
+// 开发者自己写的客户端的js 压缩
 fis.match('client/scripts/**.js', {
   optimizer: fis.plugin('uglify-js'),
   useHash: true
+});
+
+// 开发者自己写的服务端的js 压缩
+fis.match('server/**.js', {
+  optimizer: fis.plugin('uglify-js'),
+  useHash: true
+});
+
+// 开发者自己写的客户端的js 压缩
+fis.match('server/(*.js)', {
+  optimizer: fis.plugin('uglify-js'),
+  useHash: true,
+  release: '$1'
 });
 
 // // png 图片压缩
