@@ -2,29 +2,43 @@
 
 // Global start
 
-// 对js,css,png三种文件添加文件指纹
-fis.match('*.{js,css,png}', {
-  useHash: true
-});
-
-// js 压缩
-fis.match('**/*.js', {
-  optimizer: fis.plugin('uglify-js')
-});
-
-// css 压缩
-fis.match('**/*.css', {
+// sass的编译
+fis.match('client/styles/**.scss', {
+  parser: fis.plugin('node-sass', {
+      //fis-parser-sass option
+  }),
+  rExt: '.css',
+  useHash: true,
   optimizer: fis.plugin('clean-css')
 });
 
-// png 图片压缩
-fis.match('**/*.png', {
-  optimizer: fis.plugin('png-compressor')
+// 编译除了index.jade之外的所有jade文件
+fis.match('client/templates/**/*.jade', {
+  parser: fis.plugin('jade', {
+    pretty: true
+  }),
+  rExt: 'html'
 });
 
-fis.match('client/templates/(*.html)', {
-  release: '/$1',
-  useHash: false
+// 单独编译index.jade
+fis.match('client/templates/(*.jade)', {
+  parser: fis.plugin('jade', {
+    pretty: true
+  }),
+  rExt: 'html',
+  release: '/$1'
+});
+
+// 开发者自己写的js 压缩
+fis.match('client/scripts/**.js', {
+  optimizer: fis.plugin('uglify-js'),
+  useHash: true
+});
+
+// // png 图片压缩
+fis.match('client/images/**.png', {
+  optimizer: fis.plugin('png-compressor'),
+  useHash: true
 });
 
 // Global end

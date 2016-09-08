@@ -1,0 +1,25 @@
+{
+  "name": "hwfc",
+  "version": "0.0.1",
+  "description": "使用fis3+vue.js+node.js+mongodb进行构建",
+  "main": "fis-conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ougwen1235/HWFC-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ougwen1235/HWFC-1/issues"
+  },
+  "homepage": "https://github.com/ougwen1235/HWFC-1#readme",
+  "dependencies": {
+    "fis-parser-jade": "0.0.12",
+    "fis3-parser-node-sass": "^0.1.9",
+    "vue": "^1.0.26",
+    "vue-router": "^0.7.13"
+  }
+}
