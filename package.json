@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ougwen1235/HWFC-1#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
     "express": "^4.14.0",
     "fis-parser-jade": "0.0.12",
     "fis3-parser-node-sass": "^0.1.9",

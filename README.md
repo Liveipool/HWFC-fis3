@@ -2,6 +2,7 @@
 ## HWFC官方网站
 
 使用fis3+vue.js+node.js+mongodb进行构建
+另外，还使用bootstrap、express。
 
 ## 项目说明
 1. 必须使用6.0以上的nodejs；
