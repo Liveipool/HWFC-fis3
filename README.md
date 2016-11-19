@@ -1,5 +1,5 @@
 # HWFC
-## HWFC官方网站
+## HWFC官方网站（一开始使用fis3进行构建的，后来决定使用vue+fis3，故弃用）
 
 使用fis3+vue.js+node.js+mongodb进行构建
 另外，还使用bootstrap、express。
